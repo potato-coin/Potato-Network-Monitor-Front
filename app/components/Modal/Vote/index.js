@@ -3,7 +3,7 @@ import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
-import eos from 'eosjs';
+// import { JsonRpc } from 'pcjs';
 import store from 'store';
 import { translate } from 'react-i18next';
 
@@ -45,7 +45,7 @@ export default class Vote extends PureComponent {
   state = {
     scatterInited: false,
     votingSuccess: false,
-    accountName: store.get('modal_vote') || 'cryptolions1',
+    accountName: store.get('modal_vote') || 'rise.worlds',
     error: undefined,
   };
 
@@ -79,31 +79,27 @@ export default class Vote extends PureComponent {
   };
 
   voteScatter = async () => {
-    const { accountName } = this.state;
-    const { selectedProducers } = this.props;
-
-    this.setState({ votingSuccess: false, error: undefined });
-
-    const entity = window.scatter.eos(
-      {
-        blockchain: 'eos',
-        host: EOSnetwork.host,
-        port: EOSnetwork.port,
-        chainId: EOSnetwork.chainId,
-        expireInSeconds: 120,
-      },
-      eos,
-      { chainId: EOSnetwork.chainId }
-    );
-
-    try {
-      await entity.transaction(tr => tr.voteproducer(accountName, '', selectedProducers));
-
-      this.setState({ votingSuccess: true });
-    } catch (error) {
-      this.setState({ error });
-      console.error(error);
-    }
+    // const { accountName } = this.state;
+    // const { selectedProducers } = this.props;
+    // this.setState({ votingSuccess: false, error: undefined });
+    // const entity = window.scatter.eos(
+    //   {
+    //     blockchain: 'eos',
+    //     host: EOSnetwork.host,
+    //     port: EOSnetwork.port,
+    //     chainId: EOSnetwork.chainId,
+    //     expireInSeconds: 120,
+    //   },
+    //   eos,
+    //   { chainId: EOSnetwork.chainId }
+    // );
+    // try {
+    //   await entity.transaction(tr => tr.voteproducer(accountName, '', selectedProducers));
+    //   this.setState({ votingSuccess: true });
+    // } catch (error) {
+    //   this.setState({ error });
+    //   console.error(error);
+    // }
   };
 
   renderMessage = () => {

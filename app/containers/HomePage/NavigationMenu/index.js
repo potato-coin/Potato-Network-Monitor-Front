@@ -6,7 +6,7 @@ import store from 'store';
 
 // Svg
 import { SvgMenuButton } from './svg';
-import { /* DownArrow, */ ExternalLink } from './svg/arrow';
+// import { /* DownArrow, */ ExternalLink } from './svg/arrow';
 
 // Styles
 import {
@@ -106,7 +106,7 @@ export default class NavigationMenu extends PureComponent {
             {t('i18nNavigationMenu.liveTpsChart')}
           </BlueLink>
           <Border />
-          <BlueLink href="https://monitor.jungletestnet.io" target="__blank">
+          {/* <BlueLink href="https://monitor.jungletestnet.io" target="__blank">
             {t('i18nNavigationMenu.testnet')} <ExternalLink />
           </BlueLink>
           <Border />
@@ -117,7 +117,7 @@ export default class NavigationMenu extends PureComponent {
           <BlueLink href="https://bloks.io" target="__blank">
             Explorer <ExternalLink />
           </BlueLink>
-          <Border />
+          <Border /> */}
           <BlueLink onClick={this.toggleModalHandler('legend', null)}>{t('i18nNavigationMenu.legend')}</BlueLink>
         </NavMenu>
       </Container>

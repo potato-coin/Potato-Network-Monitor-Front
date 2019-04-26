@@ -1,4 +1,4 @@
-import EosApi from 'eosjs-api';
+import { JsonRpc } from 'pcjs';
 
 export const CHAIN_ID = 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906';
 
@@ -12,6 +12,4 @@ export const TRANSACTIONS_LIMIT = 50;
 export const HISTORY_ITEMS_PER_PAGE = 10;
 
 // Eos API
-export const EOS = EosApi({
-  httpEndpoint: 'https://bp.cryptolions.io',
-});
+export const EOS = new JsonRpc('https://potato.jocky123.com');

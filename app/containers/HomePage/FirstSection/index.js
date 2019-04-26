@@ -10,7 +10,7 @@ import CurrentBlockInfo from './CurrentBlockInfo';
 import GeneralInfo from './GeneralInfo';
 import UnregisteredBps from './UnregisteredBps';
 import Transactions from './Transactions';
-import EosPrice from './EosPrice';
+// import EosPrice from './EosPrice';
 
 // Actions
 import { uiActions } from '../../../bus/ui/actions';
@@ -66,7 +66,7 @@ export default class FirstSection extends PureComponent {
       <SectionOne>
         <CurrentBlockInfo lastBlockStats={lastBlockStats} />
         <GeneralInfo toggleModal={toggleModal} headBlockNum={lastBlockStats.head_block_num} />
-        <EosPrice />
+        {/* <EosPrice /> */}
         {filteredBps.length ? <UnregisteredBps unregisteredBps={filteredBps} /> : null}
         <Transactions
           transactionsList={transactionsList}

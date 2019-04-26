@@ -10,8 +10,8 @@ import { I18nextProvider } from 'react-i18next';
 // Eslint
 /* eslint global-require: 0 */
 
-// Google analytics
-import ReactGA from 'react-ga';
+// // Google analytics
+// import ReactGA from 'react-ga';
 
 // Components
 import HomePage from 'containers/HomePage/Loadable';
@@ -27,7 +27,7 @@ import { selectActualBackgroundNumber } from '../../bus/ui/selectors';
 // Styles
 import { Wrapper } from './styles';
 
-ReactGA.initialize('UA-121311805-2');
+// ReactGA.initialize('UA-121311805-2');
 
 const mapStateToProps = createStructuredSelector({
   actualBackgroundNumber: selectActualBackgroundNumber(),
@@ -37,7 +37,7 @@ const mapStateToProps = createStructuredSelector({
 export default class App extends PureComponent {
   componentDidMount() {
     socket.connect();
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    // ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   render() {

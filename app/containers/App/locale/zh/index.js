@@ -2,7 +2,7 @@ export default Object.freeze({
   translations: {
     // <NavigationMenu />
     i18nNavigationMenu: {
-      headLink: 'EOS Network Monitor.io',
+      headLink: 'Potato Network Monitor.io',
       accountInfo: '账户信息',
       accountHistory: '账户历史',
       txInfo: '交易信息',
@@ -200,11 +200,11 @@ export default Object.freeze({
         connectedUsers: '已连接用户数',
         ramUsed: '链中RAM（内存）已占用/未占用',
         totalUnpaidBlocks: '无偿块',
-        eosioRamFee: 'Eosio ram 费用',
-        eosioSaving: 'Eosio saving',
+        eosioRamFee: 'Potato ram 费用',
+        eosioSaving: 'Potato saving',
       },
       i18nEosPrice: {
-        title: 'EOS 价钱',
+        title: 'POC 价钱',
       },
       // <UnregisteredBps />
       i18nUnregisteredBps: {
@@ -262,7 +262,7 @@ export default Object.freeze({
     // <Footer />
     footer: {
       createdBy: '制作者',
-      cryptoLions: 'CryptoLions.io',
+      cryptoLions: 'PotatoCoin.com',
       gitHub: 'GitHub',
       map: '地图',
       table: '桌面',
