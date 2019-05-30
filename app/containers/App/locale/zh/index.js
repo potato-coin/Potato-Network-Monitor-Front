@@ -2,7 +2,7 @@ export default Object.freeze({
   translations: {
     // <NavigationMenu />
     i18nNavigationMenu: {
-      headLink: 'Potato Network Monitor.io',
+      headLink: 'Potato Network Monitor',
       accountInfo: '账户信息',
       accountHistory: '账户历史',
       txInfo: '交易信息',
@@ -138,7 +138,7 @@ export default Object.freeze({
         note1: '注释 1',
         ManyBp: `许多节点使用负载均衡，因此返回的信息可能不同。`,
         note2: '注释2',
-        wePull: '我们每隔几秒就用“cleos system list procedures” 更新出块节点列表。',
+        wePull: '我们每隔几秒就用“clpc system list procedures” 更新出块节点列表。',
       },
       // <Vote />
       i18nVote: {
@@ -150,9 +150,9 @@ export default Object.freeze({
         iAmEitherThe: `我是投票代币的实际拥有人，或者我有证据证明我已被授权代表受益所有人投票。`,
         iStipulateThat: `我承诺，我没有，也不会接受任何有价值的东西来换取这些选票，否则将受到没收代币或其他的惩罚。`,
         iStipulateThatIAmNot: `我承诺，我不会使用任何自动投票、重复投票或刷票的系统。这样做违反了这份合同。.`,
-        thisFeatureWas: `这个功能是为了帮助投票而创建的。它创建一个可信的出块节点的cleos命令
+        thisFeatureWas: `这个功能是为了帮助投票而创建的。它创建一个可信的出块节点的clpc命令
         使用`,
-        ourCleosWrapper: ' 我们的cleos 接口（只配置端口和地址）， ',
+        ourclpcWrapper: ' 我们的clpc 接口（只配置端口和地址）， ',
         selectedProducers: '选中的生产商',
         // Input
         placeholder: '你的账户名...',
@@ -161,7 +161,7 @@ export default Object.freeze({
         vote: '投票',
         initScatter: '初始化Scatter',
         // Footer
-        voteProducerProds: './cleos.sh system voteproducer prods',
+        voteProducerProds: './clpc.sh system voteproducer prods',
         checkAtLeastOne: '选中至少一个生产商(选择框)',
       },
       // <BpJson />

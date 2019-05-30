@@ -77,7 +77,7 @@ export default class BlockInfoModal extends PureComponent {
             <HeadText>{t('i18nModal.i18nBlockInfo.title')}</HeadText>
           </HeadBox>
           <HeadContainerBI>
-            <ApiInput value="'/v1/chain/get_block'" name="apiPath" readOnly />
+            <ApiInput value="'/potato/chain/get_block'" name="apiPath" readOnly />
             <ApiInput value={blockId} placeholder="Block id" name="blockId" onChange={this.onFieldChange} />
             <GetButton onClick={this.getData}>{t('i18nModal.i18nBlockInfo.getButton')}</GetButton>
           </HeadContainerBI>

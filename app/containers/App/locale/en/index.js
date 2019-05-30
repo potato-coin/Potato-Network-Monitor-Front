@@ -2,7 +2,7 @@ export default Object.freeze({
   translations: {
     // <NavigationMenu />
     i18nNavigationMenu: {
-      headLink: 'EOS Network Monitor.io',
+      headLink: 'Potato Network Monitor',
       accountInfo: 'Account Info',
       accountHistory: 'Account History',
       txInfo: 'TX Info',
@@ -139,7 +139,7 @@ export default Object.freeze({
         ManyBp: `Many BPs use some load balancer with many nodes behind it. For this reason, even subsequent querries sometimes return different information`,
         note2: 'NOTE 2',
         wePull:
-          'We pull the list of node producers from `cleos system list producers`. We do this every several seconds',
+          'We pull the list of node producers from `clpc system list producers`. We do this every several seconds',
       },
       // <Vote />
       i18nVote: {
@@ -151,9 +151,9 @@ export default Object.freeze({
         iAmEitherThe: `I am either the beneficial owner of the tokens with which I am voting, or I have proof that I have been authorized to vote on behalf of the beneficial owner(s).`,
         iStipulateThat: `I stipulate that I have not and will not accept anything of value in exchange for these votes, on penalty of confiscation of these tokens, and other penalties.`,
         iStipulateThatIAmNot: `I stipulate that I am not using any system of automatic voting, re-voting, or vote refreshing. Doing so violates this contract.`,
-        thisFeatureWas: `This feature was created to help with voting. It creates a cleos command based on checked producers, and
+        thisFeatureWas: `This feature was created to help with voting. It creates a clpc command based on checked producers, and
       uses`,
-        ourCleosWrapper: 'our cleos wrapper (which just configures ports and addresses)',
+        ourclpcWrapper: 'our clpc wrapper (which just configures ports and addresses)',
         selectedProducers: 'Selected producers',
         // Input
         placeholder: 'Your account name...',
@@ -162,7 +162,7 @@ export default Object.freeze({
         vote: 'Vote',
         initScatter: 'Init Scatter',
         // Footer
-        voteProducerProds: './cleos.sh system voteproducer prods',
+        voteProducerProds: './clpc.sh system voteproducer prods',
         checkAtLeastOne: 'Check at least one producer (check box)',
       },
       // <BpJson />

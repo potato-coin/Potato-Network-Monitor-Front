@@ -2,7 +2,7 @@ export default Object.freeze({
   translations: {
     // <NavigationMenu />
     i18nNavigationMenu: {
-      headLink: 'EOS Network Monitor.io',
+      headLink: 'Potato Network Monitor',
       accountInfo: 'Информация об Аккаунте',
       accountHistory: 'История Аккаунта',
       txInfo: 'Инфо О Транзакциях',
@@ -138,7 +138,7 @@ export default Object.freeze({
         note1: 'Примечание 1',
         ManyBp: `Многие БП с большим количеством нод, используют балансировщик нагрузки. По этой причине, даже последующие запросы иногда выдают различную информацию`,
         note2: 'Примечание 2',
-        wePull: 'Мы загружаем список нод продюсеров из `cleos system list producers`, каждые несколько секунд',
+        wePull: 'Мы загружаем список нод продюсеров из `clpc system list producers`, каждые несколько секунд',
       },
       // <Vote />
       i18nVote: {
@@ -150,9 +150,9 @@ export default Object.freeze({
         iAmEitherThe: `Я либо являюсь бенефициарным владельцем токенов которыми я голосую, либо у меня есть доказательство, что я был уполномочен голосовать от имени бенефициарного собственника(ов).`,
         iStipulateThat: `Я подтверждаю, что я не принимал и не буду принимать что-либо ценное, в обмен на эти голоса, под страхом конфискации этих токенов и других штрафных санкций.`,
         iStipulateThatIAmNot: `Я подтверждаю, что не использую системы автоматического голосования, повторного голосования или обновленного голосования. Такие действия, нарушают данный контракт.`,
-        thisFeatureWas: `Эта функция была создана, чтобы помочь с голосованием. Она создает cleos команду основанную на проверенных продюсерах и
+        thisFeatureWas: `Эта функция была создана, чтобы помочь с голосованием. Она создает clpc команду основанную на проверенных продюсерах и
         использует`,
-        ourCleosWrapper: 'наш cleos wrapper (который просто настраивает порты и адреса)',
+        ourclpcWrapper: 'наш clpc wrapper (который просто настраивает порты и адреса)',
         selectedProducers: 'Выбранные продюсеры',
         // Input
         placeholder: 'Имя вашего аккаунта...',
@@ -161,7 +161,7 @@ export default Object.freeze({
         vote: 'Голосовать',
         initScatter: 'Инициализация Scatter',
         // Footer
-        voteProducerProds: './cleos.sh system voteproducer prods',
+        voteProducerProds: './clpc.sh system voteproducer prods',
         checkAtLeastOne: 'Выберите по крайней мере, одного продюсера (галочка)',
       },
       // <BpJson />

@@ -61,7 +61,7 @@ const mapDispatchToProps = dispatch => ({
 @translate()
 export default class AccountHistory extends PureComponent {
   state = {
-    producerName: this.props.accountName || store.get('modal_accountHistory') || 'eoshuobipool',
+    producerName: this.props.accountName || store.get('modal_accountHistory') || 'rise',
     page: 0,
   };
 
