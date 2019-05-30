@@ -262,7 +262,7 @@ export default Object.freeze({
     // <Footer />
     footer: {
       createdBy: '制作者',
-      cryptoLions: 'PotatoCoin.com',
+      potatoCoin: 'PotatoCoin.com',
       gitHub: 'GitHub',
       map: '地图',
       table: '桌面',

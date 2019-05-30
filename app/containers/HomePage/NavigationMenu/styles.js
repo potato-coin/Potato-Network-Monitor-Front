@@ -214,3 +214,21 @@ export const SvgExternalLink = styled.svg`
     fill: #005dc1;
   }
 `;
+
+export const Intumentary = styled.div`
+  position: absolute;
+  color: rgba(0, 128, 0, 0.7);
+  font-weight: 500;
+  right: 0;
+  top: 75px;
+
+  @media (max-width: 1368px) {
+    display: ${({ isNavMenuActive }) => (isNavMenuActive ? 'flex' : 'none')};
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    color: white;
+    z-index: 3;
+    animation: ${navMenuAppear} 0.3s;
+  }
+`;

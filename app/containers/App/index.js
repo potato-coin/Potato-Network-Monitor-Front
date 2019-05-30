@@ -15,7 +15,7 @@ import { I18nextProvider } from 'react-i18next';
 
 // Components
 import HomePage from 'containers/HomePage/Loadable';
-import EasterEggPage from 'containers/EasterEggPage';
+// import EasterEggPage from 'containers/EasterEggPage';
 import MapPage from 'containers/MapPage';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import socket from '../../init/socket';
@@ -60,7 +60,7 @@ export default class App extends PureComponent {
             >
               <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route path="/easteregg" component={EasterEggPage} />
+                {/* <Route path="/easteregg" component={EasterEggPage} /> */}
                 <Route path="/map" component={MapPage} />
                 <Route component={NotFoundPage} />
               </Switch>

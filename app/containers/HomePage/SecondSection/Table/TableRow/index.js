@@ -90,11 +90,11 @@ export default class TableRow extends PureComponent {
     if (
       !producer.organizationUrl ||
       producer.organizationUrl.length < 5 ||
-      ['dev.cryptoions.io', 'eosnetworkmonitor.io'].indexOf(producer.organizationUrl) !== -1
+      ['potatocoin.com', 'potatocoin.com'].indexOf(producer.organizationUrl) !== -1
     )
       return '--';
 
-    if (producer.organizationUrl === 'cryptolions.io') return 'CryptoLions.io';
+    if (producer.organizationUrl === 'potatocoin.com') return 'PotatoCoin.com';
 
     if (producer.organizationUrl.indexOf('http') !== 0) return `http://${producer.url}`;
 

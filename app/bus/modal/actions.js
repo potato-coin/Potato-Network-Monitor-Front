@@ -1,6 +1,6 @@
 // Instruments
 import types from './types';
-import { HISTORY_ITEMS_PER_PAGE, EOS } from '../../constants';
+import { HISTORY_ITEMS_PER_PAGE, PotatoRpc } from '../../constants';
 
 export const modalActions = Object.freeze({
   fetchAccountInfo: producerName => async dispatch => {
@@ -30,7 +30,7 @@ export const modalActions = Object.freeze({
   fetchBlockInfo: blockNum => async dispatch => {
     dispatch({ type: types.FETCHING_BLOCK_INFO });
 
-    const response = await EOS.getBlock(blockNum);
+    const response = await PotatoRpc.get_block(blockNum);
 
     return dispatch({
       type: types.FETCHING_BLOCK_INFO_SUCCESS,
@@ -120,117 +120,118 @@ export const modalActions = Object.freeze({
   }),
 
   getInfo: () => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
-      const response = await EOS.getInfo({});
+      const response = await PotatoRpc.get_info();
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getBlock: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getBlock } = data;
 
-      const response = await EOS.getBlock(getBlock);
+      const response = await PotatoRpc.get_block(getBlock);
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
   getBlockHeaderState: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getBlockHeaderState } = data;
 
-      const response = await EOS.getBlockHeaderState(getBlockHeaderState);
+      const response = await PotatoRpc.get_block_header_state(getBlockHeaderState);
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getAccount: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getAccount } = data;
 
-      const response = await EOS.getAccount(getAccount);
+      const response = await PotatoRpc.get_account(getAccount);
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getAbi: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getAbi } = data;
 
-      const response = await EOS.getAbi(getAbi);
+      const response = await PotatoRpc.get_abi(getAbi);
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getRawCodeAndAbi: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getCode } = data;
 
-      const response = await EOS.getRawCodeAndAbi(getCode);
+      const abi = await PotatoRpc.get_abi(getCode);
+      const code = await PotatoRpc.get_code(getCode);
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
-        payload: response,
+        type: types.POTATO_API_SUCCESS,
+        payload: { abi, code },
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getTableRows: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const {
@@ -246,7 +247,7 @@ export const modalActions = Object.freeze({
       const limit = +getTableRowsLimit;
       const json = getTableRowsJson === 'true';
 
-      const response = await EOS.getTableRows(
+      const response = await PotatoRpc.get_table_rows(
         json,
         getTableRowsCode,
         getTableRowsScope,
@@ -258,75 +259,75 @@ export const modalActions = Object.freeze({
       );
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getCurrencyBalance: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getCurrencyBalanceСode, getCurrencyBalanceAccount, getCurrencyBalanceSymbol } = data;
 
-      const response = await EOS.getCurrencyBalance(
+      const response = await PotatoRpc.get_currency_balance(
         getCurrencyBalanceСode,
         getCurrencyBalanceAccount,
         getCurrencyBalanceSymbol
       );
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getCurrencyStats: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getCurrencyStatsСode, getCurrencyStatsSymbol } = data;
 
-      const response = await EOS.getCurrencyStats(getCurrencyStatsСode, getCurrencyStatsSymbol);
+      const response = await PotatoRpc.get_currency_stats(getCurrencyStatsСode, getCurrencyStatsSymbol);
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },
 
   getProducers: data => async dispatch => {
-    dispatch({ type: types.EOS_API_PENDING });
+    dispatch({ type: types.POTATO_API_PENDING });
 
     try {
       const { getProducersJson, getProducersLowerBound, getProducersLimit } = data;
       const limit = +getProducersLimit;
       const json = getProducersJson === 'true';
 
-      const response = await EOS.getProducers(json, getProducersLowerBound, limit);
+      const response = await PotatoRpc.get_producers(json, getProducersLowerBound, limit);
 
       return dispatch({
-        type: types.EOS_API_SUCCESS,
+        type: types.POTATO_API_SUCCESS,
         payload: response,
       });
     } catch (e) {
       return dispatch({
-        type: types.EOS_API_FAILURE,
+        type: types.POTATO_API_FAILURE,
       });
     }
   },

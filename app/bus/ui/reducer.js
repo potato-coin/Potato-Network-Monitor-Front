@@ -81,7 +81,7 @@ export const uiReducer = (state = initialState, { type, payload }) => {
     case modalTypes.FETCHING_P2P_ADDRESSES:
     case modalTypes.FETCHING_BP_JSON:
     case modalTypes.FETCHING_RAM_PRICE:
-    case modalTypes.EOS_API_PENDING:
+    case modalTypes.POTATO_API_PENDING:
       return {
         ...state,
         modalDataFetchingState: true,
@@ -97,8 +97,8 @@ export const uiReducer = (state = initialState, { type, payload }) => {
     case modalTypes.FETCHING_BP_JSON_FAILURE:
     case modalTypes.FETCHING_RAM_PRICE_SUCCESS:
     case modalTypes.FETCHING_RAM_PRICE_FAILURE:
-    case modalTypes.EOS_API_SUCCESS:
-    case modalTypes.EOS_API_FAILURE:
+    case modalTypes.POTATO_API_SUCCESS:
+    case modalTypes.POTATO_API_FAILURE:
       return {
         ...state,
         modalDataFetchingState: false,

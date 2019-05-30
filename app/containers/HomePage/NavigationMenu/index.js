@@ -3,10 +3,23 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import store from 'store';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { createStructuredSelector } from 'reselect';
 
 // Svg
 import { SvgMenuButton } from './svg';
-// import { /* DownArrow, */ ExternalLink } from './svg/arrow';
+import { /* DownArrow, */ ExternalLink } from './svg/arrow';
+
+// Components
+import FilterInput from '../SecondSection/FilterInput';
+
+// Actions
+import { uiActions } from '../../../bus/ui/actions';
+import { producerActions } from '../../../bus/producers/actions';
+
+// Selectors
+import { selectFilterInputValue } from '../../../bus/producers/selectors';
 
 // Styles
 import {
@@ -20,13 +33,34 @@ import {
   NavMenu,
   Border,
   BlueLink,
+  Intumentary,
 } from './styles';
+// import { Intumentary } from '../SecondSection/styles';
 
 // Images
 import logoGif from '../../../assets/images/small_t.gif';
 import logo from '../../../assets/images/logo_main.png';
 
+const mapStateToProps = createStructuredSelector({
+  // modal filter
+  filterInputValue: selectFilterInputValue(),
+});
+
+const mapDispatchToProps = dispach => ({
+  actions: bindActionCreators(
+    {
+      setFilterInputValue: producerActions.setFilterInputValue,
+      toggleModal: uiActions.toggleModal,
+    },
+    dispach
+  ),
+});
+
 @translate()
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 export default class NavigationMenu extends PureComponent {
   state = {
     isNavMenuActive: false,
@@ -51,7 +85,7 @@ export default class NavigationMenu extends PureComponent {
   };
 
   changeLanguage = (lng, shortLng) => () => {
-    store.set('eosMonitor_currentLanguage', shortLng);
+    store.set('potatoMonitor_currentLanguage', shortLng);
     this.props.i18n.changeLanguage(lng);
   };
 
@@ -65,7 +99,11 @@ export default class NavigationMenu extends PureComponent {
 
   render() {
     const { isNavMenuActive, isLogoActive } = this.state;
-    const { t } = this.props;
+    const {
+      t,
+      filterInputValue,
+      actions: { setFilterInputValue },
+    } = this.props;
     return (
       <Container>
         <Header>
@@ -75,7 +113,7 @@ export default class NavigationMenu extends PureComponent {
           ) : (
             <LogoImage src={logo} alt="Logo" onMouseOver={this.toggleLogoHandler} onFocus={this.toggleLogoHandler} />
           )}
-          <Headlink href="http://eosnetworkmonitor.io/">{t('i18nNavigationMenu.headLink')}</Headlink>
+          <Headlink href="http://potatocoin.com/">{t('i18nNavigationMenu.headLink')}</Headlink>
         </Header>
         <SwitcherWrapper isNavMenuActive={isNavMenuActive}>
           <LanguageSwitcher onClick={this.changeLanguage('en-US', 'en')}>En</LanguageSwitcher>
@@ -113,13 +151,16 @@ export default class NavigationMenu extends PureComponent {
           <BlueLink href="https://github.com/CryptoLions/EOS-MainNet" target="__blank">
             {t('i18nNavigationMenu.nodeInstallation')} <ExternalLink />
           </BlueLink>
-          <Border />
-          <BlueLink href="https://bloks.io" target="__blank">
+          <Border /> */}
+          <BlueLink href="https://potatocoin.com" target="__blank">
             Explorer <ExternalLink />
           </BlueLink>
-          <Border /> */}
+          <Border />
           <BlueLink onClick={this.toggleModalHandler('legend', null)}>{t('i18nNavigationMenu.legend')}</BlueLink>
         </NavMenu>
+        <Intumentary>
+          <FilterInput filterInputValue={filterInputValue} setFilterInputValue={setFilterInputValue} />
+        </Intumentary>
       </Container>
     );
   }
@@ -129,4 +170,7 @@ NavigationMenu.propTypes = {
   t: PropTypes.func,
   toggleModal: PropTypes.func,
   i18n: PropTypes.func,
+  // FilterInput
+  filterInputValue: PropTypes.string,
+  actions: PropTypes.object,
 };

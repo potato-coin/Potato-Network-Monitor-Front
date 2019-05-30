@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FilterContainer = styled.div`
-  max-width: 245px;
+  max-width: 145px;
   width: 100%;
   height: 30px;
   position: relative;

@@ -57,12 +57,12 @@ export const modalReducer = (state = initialState, { type, payload }) => {
         ...state,
         ramPrice: payload,
       };
-    case types.EOS_API_SUCCESS:
+    case types.POTATO_API_SUCCESS:
       return {
         ...state,
         eosApiData: payload,
       };
-    case types.EOS_API_FAILURE:
+    case types.POTATO_API_FAILURE:
       return {
         ...state,
         eosApiData: { error: true },

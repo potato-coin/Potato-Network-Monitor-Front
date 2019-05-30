@@ -89,7 +89,7 @@ export default class TableColumnMenu extends Component {
                 {t('i18nSecondSection.i18nTableColumnMenu.hintText.2')}
               </HintText>
               {Object.entries(
-                resources[store.get('eosMonitor_currentLanguage') || languages[1] || 'en'].translations
+                resources[store.get('potatoMonitor_currentLanguage') || languages[1] || 'en'].translations
                   .i18nSecondSection.i18nTableColumnNames
               ).map(columnName => (
                 <Item key={columnName[0]}>
