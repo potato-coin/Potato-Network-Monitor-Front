@@ -97,7 +97,7 @@ module.exports = options => ({
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        API_URL: JSON.stringify(process.env.API_URL || 'http://127.0.0.1:3002'),
+        API_URL: JSON.stringify(process.env.API_URL || 'http://47.75.115.126:3002'),
         VERSION_NUMBER: JSON.stringify(
           `${date.getFullYear()}.${month.substr(month.length - 2, 2)}.${day.substr(day.length - 2, 2)}`
         ),
