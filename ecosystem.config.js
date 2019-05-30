@@ -5,7 +5,7 @@ module.exports = {
    */
   apps: [
     {
-      name: 'routine',
+      name: 'monitor-front',
       script: 'npm',
       args: 'run start',
       watch: true,
