@@ -11,14 +11,14 @@ module.exports = {
       watch: true,
       env: {
         NODE_ENV: 'development',
-        API_URL: 'http://127.0.0.1:3002',
+        API_URL: 'http://monitor.potatocoin.com:3002',
       },
       env_sandbox: {
         NODE_ENV: 'sandbox',
       },
       env_production: {
         NODE_ENV: 'production',
-        API_URL: 'http://47.75.115.126:3002',
+        API_URL: 'http://monitor.potatocoin.com:3002',
       },
     },
   ],
