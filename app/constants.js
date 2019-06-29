@@ -11,5 +11,5 @@ export const TRANSACTIONS_LIMIT = 50;
 
 export const HISTORY_ITEMS_PER_PAGE = 10;
 
-// Eos API
+// Potato API
 export const PotatoRpc = new JsonRpc('https://potato.potatocoin.com');
