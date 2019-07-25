@@ -147,7 +147,7 @@ export default class RamPriceChart extends PureComponent {
             <HeadText>{t('i18nModal.i18nRamPrice.title')}</HeadText>
           </HeadBox>
           <HeadContainer>
-            <Title>EOS/kb RAM</Title>
+            <Title>POC/kb RAM</Title>
             <StyledSelect
               options={selectOptions}
               onChange={this.handleSelect}
