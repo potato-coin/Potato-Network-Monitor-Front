@@ -89,8 +89,8 @@ export default class Legend extends PureComponent {
             </ColorDiv>
             <ColorDesc>
               {t('i18nModal.i18nLegend.bps')}
-              {', '}
-              <Link href="https://github.com/eosrio/bp-info-standard">{t('i18nModal.i18nLegend.moreinfo')}</Link>
+              {/* {', '}
+              <Link href="https://github.com/eosrio/bp-info-standard">{t('i18nModal.i18nLegend.moreinfo')}</Link> */}
             </ColorDesc>
             <Heading>{t('i18nModal.i18nLegend.pingColorExplanation')}</Heading>
             <TextSpan>

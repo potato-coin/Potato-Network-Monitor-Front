@@ -113,7 +113,7 @@ export default Object.freeze({
         about: '关于',
         content: [
           '所有信息都来自公共节点，出块节点通常是隐藏的',
-          'EOS网络监视器是一个检查EOS公共节点并显示常规信息的工具',
+          'Potato网络监视器是一个检查Potato公共节点并显示常规信息的工具',
           '显示所有已注册的生产者，从节点的bp.json文件提取信息',
         ],
         tps: ['TPS', '每秒交易量'],
@@ -145,7 +145,7 @@ export default Object.freeze({
         title: 'VOTE',
         // Main Text
         byCompletingThisAction: '同意',
-        eosConstitution: 'EOS宪法',
+        eosConstitution: 'Potato宪法',
         theIntentOf: `“投票出块者”功能是为了对超过30个节点候选人，投出有效的选票。`,
         iAmEitherThe: `我是投票代币的实际拥有人，或者我有证据证明我已被授权代表受益所有人投票。`,
         iStipulateThat: `我承诺，我没有，也不会接受任何有价值的东西来换取这些选票，否则将受到没收代币或其他的惩罚。`,
@@ -174,7 +174,7 @@ export default Object.freeze({
       },
       // <RamPrice />
       i18nRamPrice: {
-        title: 'EOS RAM 价格',
+        title: 'POC RAM 价格',
       },
       // <LiveTps />
       i18nLiveTps: {
@@ -200,8 +200,8 @@ export default Object.freeze({
         connectedUsers: '已连接用户数',
         ramUsed: '链中RAM（内存）已占用/未占用',
         totalUnpaidBlocks: '无偿块',
-        eosioRamFee: 'Potato ram 费用',
-        eosioSaving: 'Potato saving',
+        eosioRamFee: 'POC ram 费用',
+        eosioSaving: 'POC saving',
       },
       i18nEosPrice: {
         title: 'POC 价钱',

@@ -63,7 +63,7 @@ export default class Transactions extends PureComponent {
     txId:
       this.props.txId ||
       store.get('modal_transactions') ||
-      'ca7bfb326dbdaf42c9187b5e86bcfd7e16ec47725ad7e30d55c0ad171bb19513',
+      'fd379db48f827ce9a88078026ac141287bcf86d19b34e3776040781085dd74cf',
   };
 
   componentDidMount() {
