@@ -11,14 +11,12 @@ module.exports = {
       watch: false,
       env: {
         NODE_ENV: 'development',
-        API_URL: 'https://newmonitor.potatocoin.com',
       },
       env_sandbox: {
         NODE_ENV: 'sandbox',
       },
       env_production: {
         NODE_ENV: 'production',
-        API_URL: 'https://newmonitor.potatocoin.com',
       },
     },
   ],

@@ -6,6 +6,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 const reGraphql = /\.(graphql|gql)$/;
 
@@ -86,6 +87,10 @@ module.exports = options => ({
     ],
   },
   plugins: options.plugins.concat([
+    new Dotenv({
+      safe: true,
+      systemvars: true,
+    }),
     new webpack.ProvidePlugin({
       // make fetch available
       fetch: 'exports-loader?self.fetch!whatwg-fetch',
@@ -96,8 +101,8 @@ module.exports = options => ({
     // drop any unreachable code.
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        API_URL: JSON.stringify(process.env.API_URL || 'https://newmonitor.potatocoin.com'),
+        // NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        // API_URL: JSON.stringify(process.env.API_URL || 'https://newmonitor.potatocoin.com'),
         VERSION_NUMBER: JSON.stringify(
           `${date.getFullYear()}.${month.substr(month.length - 2, 2)}.${day.substr(day.length - 2, 2)}`
         ),

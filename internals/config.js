@@ -25,7 +25,7 @@ const ReactBoilerplate = {
         'compression',
         'cross-env',
         'express',
-        'ip',
+        'dotenv-safe',
         'minimist',
         'sanitize.css',
         'concurrently',

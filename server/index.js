@@ -1,4 +1,9 @@
 /* eslint consistent-return:0 */
+const dotEnv = require('dotenv-safe');
+
+dotEnv.config({
+  allowEmptyValues: true
+});
 
 const express = require('express');
 const cors = require('cors');
