@@ -9,7 +9,7 @@ COPY . /www
 WORKDIR /www
 
 # set env variables
-ARG API_URL=https://api.eosnetworkmonitor.io 
+ARG API_URL=https://newmonitor.potatocoin.com
 ENV API_URL=${API_URL}
 
 # Install Node.js dependencies

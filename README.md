@@ -1,9 +1,9 @@
 # How to install and Use
 
 ```
-cd eos-network-monitor/netmon-frontend
+cd potato-network-monitor/netmon-frontend
 yarn
-export API_URL=https://api.eosnetworkmonitor.io
+export API_URL=https://newmonitor.potatocoin.com
 ```
 
 ### Development
