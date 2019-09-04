@@ -21,12 +21,12 @@ import socket from 'init/socket';
 import '!file-loader?name=[name].[ext]!./assets/favicon/favicon.ico';
 import '!file-loader?name=[name].[ext]!./assets/favicon/favicon-16x16.png';
 import '!file-loader?name=[name].[ext]!./assets/favicon/favicon-32x32.png';
-import '!file-loader?name=[name].[ext]!./assets/favicon/mstile-150x150.png';
-import '!file-loader?name=[name].[ext]!./assets/favicon/safari-pinned-tab.svg';
+// import '!file-loader?name=[name].[ext]!./assets/favicon/mstile-150x150.png';
+// import '!file-loader?name=[name].[ext]!./assets/favicon/safari-pinned-tab.svg';
 import '!file-loader?name=[name].[ext]!./assets/favicon/site.webmanifest';
-import '!file-loader?name=[name].[ext]!./assets/favicon/apple-touch-icon.png';
-import '!file-loader?name=[name].[ext]!./assets/favicon/android-chrome-384x384.png';
-import '!file-loader?name=[name].[ext]!./assets/favicon/android-chrome-192x192.png';
+// import '!file-loader?name=[name].[ext]!./assets/favicon/apple-touch-icon.png';
+import '!file-loader?name=[name].[ext]!./assets/favicon/android-chrome-256x256.png';
+import '!file-loader?name=[name].[ext]!./assets/favicon/android-chrome-128x128.png';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 // Store

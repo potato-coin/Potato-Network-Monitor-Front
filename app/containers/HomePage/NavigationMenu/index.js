@@ -98,7 +98,7 @@ export default class NavigationMenu extends PureComponent {
   // <LogoImage src={logo} alt="Logo" />
 
   render() {
-    const { isNavMenuActive, isLogoActive } = this.state;
+    const { isNavMenuActive } = this.state;
     const {
       t,
       filterInputValue,
@@ -108,11 +108,7 @@ export default class NavigationMenu extends PureComponent {
       <Container>
         <Header>
           <SvgMenuButton toggleNavMenuHandler={this.toggleNavMenuHandler} />
-          {isLogoActive ? (
-            <LogoImage src={logoGif} alt="Logo" onMouseLeave={this.toggleLogoHandler} style={{ width: '65px' }} />
-          ) : (
-            <LogoImage src={logo} alt="Logo" onMouseOver={this.toggleLogoHandler} onFocus={this.toggleLogoHandler} />
-          )}
+          <LogoImage src={logo} alt="Logo" onMouseOver={this.toggleLogoHandler} onFocus={this.toggleLogoHandler} />
           <Headlink href="http://potatocoin.com/">{t('i18nNavigationMenu.headLink')}</Headlink>
         </Header>
         <SwitcherWrapper isNavMenuActive={isNavMenuActive}>

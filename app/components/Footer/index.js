@@ -24,7 +24,7 @@ export default class Footer extends Component {
             {t('footer.potatoCoin')}
           </RegularLink>{' '}
           2019 (
-          <RegularLink href="https://github.com/rise-worlds/Potato-Network-Monitor" target="__blank">
+          <RegularLink href="https://github.com/potatocoinpoc/Potato-Network-Monitor" target="__blank">
             {t('footer.gitHub')}
           </RegularLink>{' '}
           v2.0-d
