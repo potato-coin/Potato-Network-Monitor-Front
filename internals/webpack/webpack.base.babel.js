@@ -121,4 +121,13 @@ module.exports = options => ({
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
   performance: options.performance || {},
+  externals: {
+    moment: 'moment',
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    redux: 'Redux',
+    'chart.js': 'Chart',
+
+    // 'react-select': 'Select',
+  },
 });
