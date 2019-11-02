@@ -6,7 +6,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
-import createPlugin from 'bugsnag-react';
 
 import 'sanitize.css/sanitize.css';
 
@@ -40,7 +39,7 @@ import './assets/styles/globalStyles';
 
 // Create redux store with history
 const MOUNT_NODE = document.getElementById('app');
-const ErrorBoundary = bugsnagClient.use(createPlugin(React));
+const ErrorBoundary = bugsnagClient.getPlugin('react');
 
 /* function updateCache() {
   if ('serviceWorker' in navigator) {

@@ -1,8 +1,11 @@
-import bugsnag from 'bugsnag-js';
+import bugsnag from '@bugsnag/js';
+import bugsnagReact from '@bugsnag/plugin-react';
+import React from 'react';
 
 const bugsnagClient = bugsnag({
-  apiKey: 'aa95be079e1a1e1f218e9d6f0b994d8a',
+  apiKey: 'ac37bcc244f8c3350f531328df6302fb',
   notifyReleaseStages: ['production'],
 });
+bugsnagClient.use(bugsnagReact, React);
 
 export default bugsnagClient;
