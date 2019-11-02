@@ -321,7 +321,7 @@ export default class TableRow extends PureComponent {
           {tableColumnState.location && (
             <LocationCell backgroundColor={backgroundColor}>
               <LocationWrapper>
-                {countryCode && <StyledFlag code={countryCode} />}
+                {countryCode && <StyledFlag code={countryCode} svg />}
                 {node.location}
               </LocationWrapper>
             </LocationCell>

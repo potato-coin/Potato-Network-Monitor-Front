@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Flag from 'react-world-flags';
+import ReactCountryFlag from 'react-country-flag';
 
 export const Trow = styled.tr`
   padding: 0px 5px;
@@ -118,7 +118,7 @@ export const TimeAgoBlock = styled.div`
 `;
 
 // Others
-export const StyledFlag = styled(Flag)`
+export const StyledFlag = styled(ReactCountryFlag)`
   margin-right: 10px;
   width: 26.6px;
   max-height: 20px;
