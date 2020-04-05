@@ -157,7 +157,7 @@
     "i18next-browser-languagedetector": "^2.2.3",
     "invariant": "2.2.4",
     "lodash": "4.17.10",
-    "minimist": "1.2.0",
+    "minimist": "1.2.3",
     "moment": "^2.22.2",
     "pcjs": "^1.1.19",
     "polished": "^1.9.2",
